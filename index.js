@@ -4,11 +4,11 @@ const cors = require('cors');
 const productRoutes = require('./routes/product');
 
 const app = express();
-const PORT = process.env.PORT || 3300;
 
 app.use(cors());
 app.use(express.json());
 
+// Root endpoint
 app.get('/', (req, res) => {
     res.json({
         message: 'Vendor B API - Distro Modern',
@@ -21,20 +21,14 @@ app.get('/', (req, res) => {
     });
 });
 
+// Product routes
 app.use('/vendor-b/products', productRoutes);
 
+// 404 handler
 app.use((req, res) => {
     res.status(404).json({ 
         error: 'Endpoint not found' 
     });
 });
 
-if (require.main === module) {
-    app.listen(PORT, () => {
-        console.log(`Vendor B API -- http://localhost:${PORT}`);
-    });
-}
-
 module.exports = app;
-
-//coba mau deploy

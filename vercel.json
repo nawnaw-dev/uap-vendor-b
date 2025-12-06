@@ -13,6 +13,6 @@
     }
   ],
   "env": {
-    "DATABASE_URL": "@database_url"
+    "DATABASE_URL": "postgresql://neondb_owner:npg_Qt0ZTHcB8Oyo@ep-withered-snow-a184o9wx-pooler.ap-southeast-1.aws.neon.tech/vendorb?sslmode=require&channel_binding=require"
   }
 }
