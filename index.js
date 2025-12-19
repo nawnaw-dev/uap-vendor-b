@@ -5,11 +5,6 @@ const productRoutes = require('./routes/product');
 
 const app = express();
 
-/**
- * Watermark Code
- * Dibuat oleh Naura-Vendor B
- */
-
 app.use(cors());
 app.use(express.json());
 
